@@ -1,3 +1,10 @@
+# using this file to experiment with 3 tables, 3 tables works succesfully,
+# I can find an item with many to many attributes, for example it works
+# to "search for ID" when I find
+
+#got 3 tables, many 2 many working with testing.sql files, when searching for food by ID, but gonna abandon 3 tables in favor of 2, because "creating a new food item" is way too complicated and it's taking too long to solve how to do it after numerous experimentations, i won't have time to finish my app if I keep working on 3 tables. The working code is saved in the testing.sql files, that i WILL NOT use in my final project.'
+
+
 \c projectesting2
 
 DROP TABLE IF EXISTS food;
@@ -35,18 +42,18 @@ WHERE x.food_id = 2
 GROUP BY f.id
 
 #Create New /Add psuedocode
-INSERT INTO food (name, img_url, review) VALUES ('$/name/', , 'good'); *
-INSERT INTO diet (diet_name) VALUES ('keto', ' vegan');
-INSERT INTO  cross_reference(food_id, diet_id) VALUES (food.id, diet.id);
+# INSERT INTO food (name, img_url, review) VALUES ('$/name/', , 'good'); *
+# INSERT INTO diet (diet_name) VALUES ('keto', ' vegan');
+# INSERT INTO  cross_reference(food_id, diet_id) VALUES (food.id, diet.id);
 
-$/content/, $/author/, $/genre_id/
+# $/content/, $/author/, $/genre_id/
 
-INSERT INTO cross_reference (food_id, diet_id) VALUES (
-  INSERT INTO food (name, img_url, review) VALUES ('chips', 'www.chips.com', 'good')
-    RETURNING ID,
-    INSERT INTO diet (diet_name) VALUES ('paleo')
-      RETURNING ID
-    );
+# INSERT INTO cross_reference (food_id, diet_id) VALUES (
+ #  INSERT INTO food (name, img_url, review) VALUES ('chips', 'www.chips.com', 'good')
+ #    RETURNING ID,
+  #   INSERT INTO diet (diet_name) VALUES ('paleo')
+  #     RETURNING ID
+   #  );
 
 
 

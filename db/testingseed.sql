@@ -1,5 +1,7 @@
 \c projectesting2
 
+#using this file to experiment with 3 tables.
+
 INSERT INTO food (name, img_url, review) VALUES
   (
     'Brownie Crisps',
