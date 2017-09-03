@@ -9,7 +9,10 @@ module.exports = {
         res.locals.items = items;
         next();
       })
-      .catch(err => next(err));
+      .catch(err => {
+        console.log(err)
+        next(err)
+      });
   },
 
     getOne(req, res, next) {

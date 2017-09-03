@@ -10,13 +10,19 @@ const db = pgp(dbConfig);
 module.exports = {
 
   findAll() {
+    return db.any(`
+      SELECT * FROM food
+    `)
+  },
+
+  /*findAll() {
     return db.many(`
       SELECT food.id, food.name, food.img_url, food.review, diet.diet_name
         FROM food INNER JOIN diet
         ON food.diet_id = diet.id
     ORDER BY id
     `);
-  },
+  }, */
 
   findById(id) {
     return db.one(`
