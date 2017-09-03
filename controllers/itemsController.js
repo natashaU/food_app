@@ -41,7 +41,10 @@ module.exports = {
         res.locals.item = item;
         next();
       })
-      .catch(err => next(err));
+      .catch(err => {
+        console.log(err);
+        next(err);
+      })
   },
 
     destroy(req, res, next) {
