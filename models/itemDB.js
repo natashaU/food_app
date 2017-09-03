@@ -24,6 +24,16 @@ module.exports = {
     `);
   },
 
+    findDiet(filter) {
+    return db.many(`
+      SELECT food.id, food.name, food.img_url, food.review, diet.diet_name
+        FROM food INNER JOIN diet
+        ON food.diet_id = diet.id
+        WHERE diet.diet_name = $/diet_name/
+    ORDER BY id
+    `, filter);
+  },
+
   findById(id) {
     return db.one(`
       SELECT food.id, date_created, food.name, review, img_url, diet.diet_name

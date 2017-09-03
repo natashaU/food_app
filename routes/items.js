@@ -15,7 +15,9 @@ itemsRouter.route('/:id')
 
 
 itemsRouter.route('/')
-  .get(controller.index, views.showItems, views.show404)
+  //.get(controller.index, views.showItems, views.show404)
+  .get(controller.search, views.showItems, views.show404)
   .post(controller.create, views.handleCreate, views.show406);
+
 
 module.exports = itemsRouter;

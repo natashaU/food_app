@@ -2,6 +2,20 @@ const itemDB = require('../models/itemDB');
 
 module.exports = {
 
+    /*index(req, res, next) {
+    itemDB.findAll()
+      .then((items) => {
+        console.log(items)
+        res.locals.items = items;
+        next();
+      })
+      .catch(err => {
+        console.log(err)
+        next(err)
+      });
+  }, */
+
+
     index(req, res, next) {
     itemDB.findAll()
       .then((items) => {
@@ -14,6 +28,20 @@ module.exports = {
         next(err)
       });
   },
+
+  search(req, res, next) {
+    itemDB.findDiet(req.query)
+      .then((items) => {
+        console.log(items)
+        res.locals.items = items;
+        next();
+      })
+      .catch(err => {
+        console.log(err)
+        next(err)
+      });
+  },
+
 
     getOne(req, res, next) {
     itemDB.findById(req.params.id)
