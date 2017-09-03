@@ -1,0 +1,12 @@
+
+  <% include ../partials/boilerplate %>
+
+  <a href="/items/new">Add item</a>
+  <% for (let item of data) { %>
+    <div class='item'>
+      <p><%= item.name %></p>
+      <a href='/items/<%= item.id%>'>Learn more</a>
+    </div>
+  <% } %>
+
+  <% include ../partials/footer %>

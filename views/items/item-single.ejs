@@ -1,0 +1,15 @@
+<% include ../partials/boilerplate %>
+
+<div class='item'>
+  <h1><%= item.name %></h1>
+  <h3><%= item.img_url %></h3>
+  <h3><%= item.review %></h3>
+  <h3><%= item.diet_id %></h3>
+  <a href="/items/<%= data.id %>/edit"> Edit this item </a>
+  <form action="/items/<%= data.id %>?_method=Delete" method="Post">
+    <input type="Submit" value="Delete"/>
+  </form>
+  <a href='/items/'>See all items</a>
+</div>
+
+<% include ../partials/footer %>

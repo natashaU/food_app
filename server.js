@@ -4,7 +4,7 @@ const methodOverride = require('method-override');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 
-//const itemsRouter = require('./routes/items');
+const itemsRouter = require('./routes/items');
 
 const PORT = process.env.PORT || 3000;
 
@@ -21,10 +21,13 @@ app.use(bodyParser.json());
 
 app.use(methodOverride('_method'));
 
-//app.use('/items', itemsRouter);
+app.use('/items', itemsRouter);
+
+// use this??
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.send('hello world');
+  res.render('index');
 });
 
 app.listen(PORT, () => {

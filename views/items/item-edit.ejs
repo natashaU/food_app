@@ -1,0 +1,21 @@
+<% include ../partials/boilerplate %>
+
+<form method='POST' action='/items/<%= data.id %>?_method=PUT'>
+  <input name="id" type="hidden" value="<%= data.id %>">
+  <input name='name' type='text' value='<%= data.name %>' />
+  <input name='img_url' type='text' value='<%= data.img_url %>' />
+  <input name='review' type='text' value='<%= data.review %>' />
+  <label for='diet_id'> Diet
+        <select name='diet_id' type='text'>
+          <option value='1'>Organic</option>
+          <option value='2'>Paleo</option>
+          <option value='3'>Gluten-Free</option>
+          <option value='4'>Vegan</option>
+          <option value='5'>Keto</option>
+          <option value='6'>GMO</option>
+        </select>
+      </label></br>
+  <input type='submit' value='Edit it!' />
+</form>
+
+<% include ../partials/footer %>
