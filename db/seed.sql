@@ -1,4 +1,4 @@
-\c trader_joe_grocerylist
+
 
   INSERT INTO diet (diet_name) VALUES
     ('Organic'),

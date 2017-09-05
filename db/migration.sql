@@ -1,4 +1,4 @@
-\c trader_joe_grocerylist
+
 
 DROP TABLE IF EXISTS food;
 DROP TABLE IF EXISTS diets;
