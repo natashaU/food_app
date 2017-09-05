@@ -2,7 +2,7 @@
 
 ** Healthy eating has never been easier **
 
-[Try the app here](https://radiant-cliffs-99607.herokuapp.com/)
+[Try the app here with Heroku!](https://radiant-cliffs-99607.herokuapp.com/)
 
 ## The App
 
