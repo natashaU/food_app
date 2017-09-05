@@ -34,16 +34,26 @@ module.exports = {
     });
   },
 
-  handleCreate(req, res) {
+  /*handleCreate(req, res) {
     res.redirect('/items');
+  }, */
+
+handleCreate(req, res) {
+    res.redirect('/');
   },
 
   handleUpdate(req, res) {
     res.redirect(`/items/${req.params.id}`);
   },
 
-  handleDelete(req, res) {
+  /*handleDelete(req, res) {
     res.redirect('/items');
+  }, */
+
+  handleDelete(req, res) {
+    res.redirect('/');
   },
+
+
 }
 

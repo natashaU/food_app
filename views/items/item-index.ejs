@@ -1,12 +1,20 @@
 
   <% include ../partials/boilerplate %>
-
-  <a href="/items/new">Add item</a>
+  <div id="indexContainer">
+  <div id="indexDiv" class="textadd">
+  <h2 id="black">My Shopping List</h2>
+  <div id="shoppingindexdiv">
+  <a class="addNewBtn" id="addNew" href="/items/new">Add New Item</a>
   <% for (let item of data) { %>
     <div class='item'>
-      <p><%= item.name %></p>
-      <a href='/items/<%= item.id%>'>Learn more</a>
+      <p id="addName" ><%= item.name %></p>
+      <a class="addNewBtn" id="learnMore"
+      href='/items/<%= item.id%>'>Learn more</a>
     </div>
   <% } %>
+  </div>
+  </div>
+  </div>
+
 
   <% include ../partials/footer %>

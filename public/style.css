@@ -1,3 +1,404 @@
+@import url(https://oss.maxcdn.com/libs/animate.css/2.0/animate.min.css);
+@import url(//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css);
+
+html,body {
+    width: 100%;
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    background: #222222 url('http://cdn.clemensotto.com/codepen/img/1.jpg') no-repeat top center fixed;
+  background-size: cover;
+  font-family: sans-serif;
+}
+
 h1 {
-  color: red;
+    font-size: 60px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 1px 4px #000;
+    margin-top: 20px;
+}
+
+#box {
+    position: fixed;
+    width: 500px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -250px;
+    text-align: center;
+    -webkit-animation-name: bounceInDown;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: bounceInDown;
+    -moz-animation-fill-mode: both;
+    -moz-animation-duration: 1.5s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: linear;
+    animation-name: bounceInDown;
+    animation-fill-mode: both;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.well-color {
+  -webkit-font-smoothing: antialiased;
+    background: #000222;
+    background: -moz-linear-gradient(top,  #000222 0%, #4b637c 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000222), color-stop(100%,#4b637c));
+    background: -webkit-linear-gradient(top,  #000222 0%,#4b637c 100%);
+    background: -o-linear-gradient(top,  #000222 0%,#4b637c 100%);
+    background: -ms-linear-gradient(top,  #000222 0%,#4b637c 100%);
+    background: linear-gradient(top,  #000222 0%,#4b637c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000222', endColorstr='#4b637c',GradientType=0 );
+  border: #000222;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 40px;
+}
+
+input, input[placeholder]{
+    text-align:center;
+}
+
+
+p {
+    color:lightgrey;
+    width: 80%
+    line-height: 1.3em;
+    text-align: justify;
+}
+
+.1 {
+  width:100%;
+  height:100%;
+}
+
+ * {
+  outline:none;
+  border:none;
+  margin:0px;
+  padding:0px;
+  font-family:Courier, monospace;
+}
+
+#paper {
+  color:#FFF;
+  font-size:20px;
+}
+#margin {
+  margin-left:12px;
+  margin-bottom:20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.textadd {
+  width:500px;
+  height: 1200px;
+  overflow:hidden;
+  background-color:#FFF;
+  color:#222;
+  font-family:Courier, monospace;
+  font-weight:normal;
+  font-size:24px;
+  resize:none;
+  line-height:40px;
+  padding-left:100px;
+  padding-right:100px;
+  padding-top:45px;
+  padding-bottom:34px;
+  background-image:url(https://static.tumblr.com/maopbtg/E9Bmgtoht/lines.png), url(https://static.tumblr.com/maopbtg/nBUmgtogx/paper.png);
+  background-repeat:repeat-y, repeat;
+  -webkit-border-radius:12px;
+  border-radius:12px;
+  -webkit-box-shadow: 0px 2px 14px #000;
+  box-shadow: 0px 2px 14px #000;
+  border-top:1px solid #FFF;
+  border-bottom:1px solid #FFF;
+}
+#title {
+  background-color:transparent;
+  border-bottom:3px solid #FFF;
+  color: black;
+  font-size:20px;
+  font-family:Courier, monospace;
+  height:28px;
+  font-weight:bold;
+  width:220px;
+}
+#addbutton {
+  cursor:pointer;
+  margin-top:20px;
+  float:right;
+  height:40px;
+  padding-left:24px;
+  padding-right:24px;
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight:bold;
+  font-size:20px;
+  color:#FFF;
+  text-shadow: 0px -1px 0px #000000;
+  -webkit-border-radius:8px;
+  border-radius:8px;
+  border-top:1px solid #FFF;
+  -webkit-box-shadow: 0px 2px 14px #000;
+  box-shadow: 0px 2px 14px #000;
+  background-color: #62add6;
+  background-image:url(https://static.tumblr.com/maopbtg/ZHLmgtok7/button.png);
+  background-repeat:repeat-x;
+}
+.buttonadd:active {
+  zoom: 1;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+.buttonadd:focus {
+  zoom: 1;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+#wrapper {
+  width:700px;
+  height:auto;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:24px;
+  margin-bottom:100px;
+}
+
+/*#addurl {
+  width: 30%;
+  height: 20px;
+
+} */
+
+input#searchbtn {
+  background-color: red;
+  width: 20%;
+  border: 1px solid black;
+}
+
+#dietadd {
+padding-top: 2%;
+float: left;
+
+}
+
+#imgadd {
+  float: left;
+  padding-top: 2%;
+  padding-right: 2%;
+}
+
+input#searchbtn:hover {
+  background-color: #D3D3D3;
+  width: 20%;
+}
+
+#itemName {
+  font-family:'Lato', sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+#indexContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#indexDiv {
+  width: 800px;
+}
+
+#black {
+  font-family: cursive;
+  font-size: 50px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 36px;
+  padding-top: 3%;
+  position: relative;
+  top: 1px;
+}
+
+#addName{
+  /*position: relative;
+  top: 45%; */
+  margin-top: 5%;
+  /*bottom: 40%; */
+  /*padding: 10px; */
+  padding-top: 10px;
+  color: black;
+  /*border: 1px solid black; */
+
+}
+
+
+#learnMore{
+  position: relative;
+  border: 1px solid black;
+  top: 1%;
+
+
+}
+
+#shoppingindexdiv {
+  margin-top: 7%;
+  border: 1px;
+}
+
+#addNew {
+  width: 30%;
+  font-weight: 800;
+
+}
+
+.addNewBtn {
+  position: relative;
+  top: .3%;
+  color: white;
+  background-color: #cc1f2c;
+  font-family:"heuristicabolditalic", serif;
+  font-size: 15px;
+  background-image: url("https://services.mscnet.com/tj/FearlessFlyerSignup/image/red-button-pattern.png");
+  border: 1px solid red;
+  width: 20%;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+
+.addNewBtn:hover {
+  border: 1px solid red;
+  background: black;
+  text-decoration: none;
+  color: white;
+}
+
+#singlereview {
+  color: black;
+}
+
+#indexContainer {
+
+width: 100%;
+ display: flex;
+ height: 100vh;
+ justify-content: center;
+}
+
+#item {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid black;
+  align-self:center;
+  background-color: #cc1f2c;
+  background-image: url("https://services.mscnet.com/tj/FearlessFlyerSignup/image/red-button-pattern.png");
+  font-family:'Lato', sans-serif;
+  height: 600px;
+  width: 100%;
+  max-width: 800px;
+  font-size: 16px;
+}
+
+#editWrapper {
+  width: 100%;
+ display: flex;
+ height: 100vh;
+ justify-content: center;
+ border: 1px solid black;
+
+}
+
+#editDiv {
+  align-self: center;
+  border: 1px solid black;
+}
+
+#img {
+  width: 400px;
+  height: 300px;
+}
+
+#singlereview {
+  font-family:'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+#editSingle {
+  float:left;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 20px;
+  background-color: black;
+  color: white;
+
+}
+
+
+#editSingle:hover{
+    transform:rotateX(35deg);
+    background-color: transparent;
+    border: 3px solid black;
+    text-decoration: none;
+}
+
+#deleteSingle:hover{
+    transform:rotateX(35deg);
+    background-color:transparent;
+    border: 3px solid black;
+    text-decoration: none;
+}
+
+#searchSingle:hover{
+    transform:rotateX(35deg);
+    background-color:transparent;
+    border: 3px solid black;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+
+
+#deleteSingle {
+  float:left;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 20px;
+  width: 100px;
+  background-color: black;
+  color: white;
+
+}
+
+#searchSingle{
+  float:left;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 20px;
+  background-color: black;
+  color: white;
+
 }

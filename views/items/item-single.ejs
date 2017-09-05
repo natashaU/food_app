@@ -1,15 +1,19 @@
 <% include ../partials/boilerplate %>
 
-<div class='item'>
+<div id="indexContainer">
+<div id='item'>
+
   <h1><%= item.name %></h1>
-  <img src=<%= item.img_url %>>
-  <h3><%= item.review %></h3>
+  <img id='img' src=<%= item.img_url %>>
+  <h3 id="singlereview"><%= item.review %></h3>
   <h3><%= item.diet_id %></h3>
-  <a href="/items/<%= data.id %>/edit"> Edit this item </a>
+  <a id='editSingle'href="/items/<%= data.id %>/edit"> Edit this item </a>
   <form action="/items/<%= data.id %>?_method=Delete" method="Post">
-    <input type="Submit" value="Delete"/>
+    <input id="deleteSingle" type="Submit" value="Delete"/>
   </form>
-  <a href='/items/'>See all items</a>
+  <a id='searchSingle' href='/'>Search Again</a>
+
+</div>
 </div>
 
 <% include ../partials/footer %>

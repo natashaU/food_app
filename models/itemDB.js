@@ -24,7 +24,7 @@ module.exports = {
     `);
   },
 
-    findDiet(filter) {
+  findDiet(filter) {
     return db.many(`
       SELECT food.id, food.name, food.img_url, food.review, diet.diet_name
         FROM food INNER JOIN diet
@@ -33,6 +33,7 @@ module.exports = {
     ORDER BY id
     `, filter);
   },
+
 
   findById(id) {
     return db.one(`

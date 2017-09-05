@@ -8,6 +8,7 @@ itemsRouter.get('/:id/edit', controller.getOne, views.showEditForm, views.show40
 
 itemsRouter.get('/new', views.showAddForm);
 
+
 itemsRouter.route('/:id')
   .get(controller.getOne, views.showOne, views.show404)
   .put(controller.update, views.handleUpdate, views.show406)
@@ -18,6 +19,8 @@ itemsRouter.route('/')
   //.get(controller.index, views.showItems, views.show404)
   .get(controller.search, views.showItems, views.show404)
   .post(controller.create, views.handleCreate, views.show406);
+
+  //itemsRouter.get('/diet', controller.search, views.showItems, views.show404);
 
 
 module.exports = itemsRouter;

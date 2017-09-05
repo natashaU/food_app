@@ -1,10 +1,17 @@
 <% include ../partials/boilerplate %>
 
-<form method='POST' action='/items'>
-  <input name='name' type='text' placeholder='Title' />
-  <input name='img_url' type='text' placeholder='Image' />
-  <input name='review' type='text' placeholder='Review' />
-<label for='diet_id'> Diet
+<div id="wrapper">
+
+  <form id="paper" method="POST" action="/items">
+
+    <div id="margin">Item Name: <input id="title" type="text" name="name"></div>
+
+    <textarea placeholder="Write your review" class="textadd" name="review" rows="10" style="overflow: hidden; word-wrap: break-word; resize: none; height: 10%; "></textarea>
+    <div id="imgadd">
+    <input name='img_url' type='text' id='addurl' placeholder='Image' />
+    </div>
+    <div id="dietadd">
+    <label id="addDiet" for='diet_id'>Diet
         <select name='diet_id' type='text'>
           <option value='1'>Organic</option>
           <option value='2'>Paleo</option>
@@ -14,7 +21,15 @@
           <option value='6'>GMO</option>
         </select>
       </label></br>
-  <input type='submit' value='Add it!' />
-</form>
+      </div>
+
+    <br>
+    <input class="buttonadd" id="addbutton" type="submit" value="Add it">
+
+
+  </form>
+
+</div>
+
 
 <% include ../partials/footer %>

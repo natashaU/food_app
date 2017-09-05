@@ -1,0 +1,57 @@
+<% include ./partials/boilerplate.ejs %>
+<div>
+  <h1>hello world</h1>
+  <form  method="get" action="/items" >
+  <input  type="text" id="search" name="diet_name" placeholder="Search Diets">
+  <input  type="submit" name="submit" value="Search">
+</form
+</div>
+<% include ./partials/footer.ejs %>
+
+
+item-add.ejs original code:
+
+<div id= "addformdivwrapper">
+<div id="addformdiv">
+
+<form method='POST' action='/items'>
+  <input name='name' type='text' placeholder='Title' />
+  <input name='img_url' type='text' placeholder='Image' />
+  <input name='review' type='text' placeholder='Review' />
+<label for='diet_id'> Diet
+        <select name='diet_id' type='text'>
+          <option value='1'>Organic</option>
+          <option value='2'>Paleo</option>
+          <option value='3'>Gluten-Free</option>
+          <option value='4'>Vegan</option>
+          <option value='5'>Keto</option>
+          <option value='6'>GMO</option>
+        </select>
+      </label></br>
+  <input type='submit' value='Add it!' />
+</form>
+
+</div>
+</div>
+
+EDIT IT ----->
+
+<form method='POST' action='/items/<%= data.id %>?_method=PUT'>
+  <input name="id" type="hidden" value="<%= data.id %>">
+  <input name='name' type='text' value='<%= data.name %>' />
+  <input name='img_url' type='text' value='<%= data.img_url %>' />
+  <input name='review' type='text' value='<%= data.review %>' />
+  <label for='diet_id'> Diet
+        <select name='diet_id' type='text'>
+          <option value='1'>Organic</option>
+          <option value='2'>Paleo</option>
+          <option value='3'>Gluten-Free</option>
+          <option value='4'>Vegan</option>
+          <option value='5'>Keto</option>
+          <option value='6'>GMO</option>
+        </select>
+      </label></br>
+  <input type='submit' value='Edit it!' />
+</form>
+
+<% include ../partials/footer %>

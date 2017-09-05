@@ -1,11 +1,30 @@
 <% include ./partials/boilerplate.ejs %>
-<div>
-  <h1>hello world</h1>
-  <form  method="get" action="/items" >
+
+<div id="wrap">
+<br><br>
+<div class="container">
+<div id="box">
+<div class="text-center">
+<h1>Healthy Helper</h1>
+<div class="col-md-12 text-center pull-middle">
+  <div class="form-group">
+<form  method="get" action="/items" >
   <input  type="text" id="search" name="diet_name" placeholder="Search Diets">
-  <input  type="submit" name="submit" value="Search">
+  <input id="searchbtn"  type="submit" name="submit" value="Search">
 </form
 </div>
+</div>
+</div>
+</div>
+<div id='wrapper'>
+<div id="footer text-center">
+<div class="container text-muted">
+What is this all <a href="/about">about</a>? - <a href="https://www.linkedin.com/in/natasha-umer-44bb0a2a/" >Contact</a>
+</div>
+</div>
+</div>
+
+
 <% include ./partials/footer.ejs %>
 
 

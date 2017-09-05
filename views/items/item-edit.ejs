@@ -1,11 +1,23 @@
 <% include ../partials/boilerplate %>
 
-<form method='POST' action='/items/<%= data.id %>?_method=PUT'>
+<div id="wrapper">
+
+
+  <form id="paper" method='POST' action='/items/<%= data.id %>?_method=PUT'>
   <input name="id" type="hidden" value="<%= data.id %>">
-  <input name='name' type='text' value='<%= data.name %>' />
-  <input name='img_url' type='text' value='<%= data.img_url %>' />
-  <input name='review' type='text' value='<%= data.review %>' />
-  <label for='diet_id'> Diet
+
+    <div id="margin">Item Name: <input value='<%= data.name %>' type="text" name="name">
+    </div>
+
+    <textarea class="textadd" style="overflow: hidden; word-wrap: break-word; resize: none; height: 10%;" rows="10" name='review' type="text" value=>
+    <%= data.review %>
+    </textarea>
+
+    <div id="imgadd">
+    <input name='img_url' type='text' id='addurl' value='<%= data.img_url %>' />
+    </div>
+    <div id="dietadd">
+    <label id="addDiet" for='diet_id'>Diet
         <select name='diet_id' type='text'>
           <option value='1'>Organic</option>
           <option value='2'>Paleo</option>
@@ -15,7 +27,17 @@
           <option value='6'>GMO</option>
         </select>
       </label></br>
-  <input type='submit' value='Edit it!' />
-</form>
+      </div>
+
+    <br>
+    <input class="buttonadd" id="addbutton" type="submit" value="Edit it">
+
+
+  </form>
+
+</div>
+
 
 <% include ../partials/footer %>
+
+
