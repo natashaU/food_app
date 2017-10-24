@@ -6,11 +6,15 @@
 
 ## The App
 
+Search for a food item at a grocery store and Healthy Helper will tell you if it meets your dietry concerns.
+
 Healthy-eating involves months -- if not years -- of research, knowledge, and meticulously reading labels of every food item that you buy.
 Looking for something that's sugar-free? Do you want to start a Keto diet, but don't know where to begin? Curious to try Paleo out but you don't even know what the word even means? Healthy Helper is a virtual food label that categorizes your favorite items into different dietry concerns,
-so you'll never have to read another food label again.
+so you'll never have to read another food label again.   
 
-Currently, in beta-testing, healthy helper is available across Trader Joe's nationwide, you can search for the following diets:
+![Landing Page](./HealthyHelper.png)
+
+Currently, in beta-testing with food items available at Trader Joe's, you can search for the following diets:
 
 * Organic
 * Paleo
@@ -20,7 +24,7 @@ Currently, in beta-testing, healthy helper is available across Trader Joe's nati
 * Paleo
 
 
-This app searches for specific diets, by joining together two tables in PSQL and filtering the results for the diet_name, check out this very special function from the app's model:
+This app searches for specific diets, by joining together two tables in PSQL and filtering the results for the diet_name, check out the filter function I wrote from the app's model:
 
 ```
   findDiet(filter) {
@@ -34,3 +38,11 @@ This app searches for specific diets, by joining together two tables in PSQL and
   },
 
 ```
+
+## Technologies used:
+* Node
+* EJS
+* PostgreSql
+* Express
+* SQL
+* Javascript
