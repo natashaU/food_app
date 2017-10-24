@@ -23,6 +23,7 @@ Currently, in beta-testing with food items available at Trader Joe's, you can se
 * Gluten Free
 * Paleo
 
+![Add Page](./diet4.png)
 
 This app searches for specific diets, by joining together two tables in PSQL and filtering the results for the diet_name, check out the filter function I wrote from the app's model:
 
